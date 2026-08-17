@@ -127,18 +127,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           className="flex items-center gap-2 sm:gap-2.5 cursor-pointer group select-none"
         >
           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-500 text-white flex items-center justify-center shadow-md group-hover:scale-105 transition shrink-0 overflow-hidden border border-amber-400/30">
-            {config.logoUrl ? (
-              <img
-                src={config.logoUrl}
-                alt={config.name_en || 'Store Logo'}
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  (e.currentTarget as HTMLElement).style.display = 'none';
-                }}
-              />
-            ) : (
-              <UtensilsCrossed className="w-4 h-4 sm:w-5 sm:h-5" />
-            )}
+            <img
+              src={config.logoUrl || './p'}
+              alt={config.name_en || 'Store Logo'}
+              className="w-full h-full object-cover"
+            />
           </div>
           <div>
             <span className="font-bold text-base sm:text-lg text-stone-900 tracking-tight font-kulen block leading-tight">
@@ -239,8 +232,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           )}
 
-          {/* Settings & Staff / Chef / Admin Login Icon Button (Hidden for Chef and on mobile) */}
-          {!isChefUser && (
+          {/* Settings & Staff / Chef / Admin Login Icon Button (Hidden for Chef, Customer view, and on mobile) */}
+          {!isChefUser && currentView !== 'customer' && (
             <button
               id="staff-settings-btn"
               onClick={onOpenStaffLogin}

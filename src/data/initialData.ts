@@ -17,7 +17,7 @@ export const initialRestaurantConfig: RestaurantConfig = {
   address_km: 'ផ្លូវលេខ ៥១ (ផ្លូវប៉ាស្ទ័រ), សង្កាត់បឹងកេងកង១, ភ្នំពេញ',
   address_en: 'St. 51 (Pasteur), BKK1, Phnom Penh',
   phone: '012 888 999 / 098 777 666',
-  logoUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=200&q=80',
+  logoUrl: '/logos/smartMenu.png',
   openTime: '07:00',
   closeTime: '22:00',
   wifiName: 'SmartMenu_Guest_5G',
