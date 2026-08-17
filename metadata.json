@@ -1,0 +1,10 @@
+{
+  "name": "Remix TableQR - Digital Menu, Kitchen Khmer TTS \u0026 POS Print",
+  "description": "Tabletop QR code digital menu in Khmer and English, live kitchen tablet with bell alert, dynamic Gemini Khmer TTS voice announcement, RawBT thermal printer integration for PP587, and Telegram bot notifications.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

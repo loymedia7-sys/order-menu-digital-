@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Bayon&family=Koulen&family=Kantumruy+Pro:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+  body {
+    font-family: 'Battambang', 'Kantumruy Pro', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  html {
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(168, 162, 158, 0.4) transparent;
+  }
+
+  /* Universal clean slim modern scrollbars across all browsers */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(168, 162, 158, 0.45);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(120, 113, 108, 0.75);
+  }
+
+  /* Remove clunky browser default scrollbar arrow buttons */
+  ::-webkit-scrollbar-button {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Koulen Font for Khmer Bold Text, Headings, Titles, Badges, Tabs, Buttons & Prices */
+  .font-koulen,
+  .font-kulen,
+  .font-khmer-bold,
+  .font-khmer-title,
+  .font-khmer-heading,
+  .khmer-bold,
+  .khmer-title {
+    font-family: 'Koulen', 'Bayon', cursive, sans-serif;
+    letter-spacing: 0.035em;
+    line-height: 1.35;
+  }
+
+  /* Default Khmer utility class - defaults to Koulen for bold/title elements */
+  .font-khmer {
+    font-family: 'Koulen', 'Bayon', cursive, sans-serif;
+    letter-spacing: 0.03em;
+  }
+
+  /* Battambang Font for Khmer Paragraphs, Descriptions, Subtitles, Notes & Body Text */
+  .font-battambang,
+  .font-khmer-body,
+  .font-khmer-text,
+  .font-khmer-desc,
+  .font-khmer-paragraph,
+  .khmer-body,
+  .khmer-paragraph,
+  p.font-khmer,
+  span.font-battambang {
+    font-family: 'Battambang', 'Kantumruy Pro', 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.65;
+    letter-spacing: 0.015em;
+  }
+
+  .font-battambang-bold {
+    font-family: 'Battambang', 'Kantumruy Pro', sans-serif;
+    font-weight: 700;
+    line-height: 1.55;
+  }
+
+  .font-bayon {
+    font-family: 'Bayon', 'Koulen', cursive, sans-serif;
+    letter-spacing: 0.035em;
+  }
+}
+
+/* Hide scrollbar for category carousel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Thermal receipt & Table QR print styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-qr-card, #printable-qr-card * {
+    visibility: visible;
+  }
+  #printable-qr-card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    box-shadow: none !important;
+  }
+}
+
+
